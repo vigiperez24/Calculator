@@ -9,7 +9,6 @@
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        overflow: hidden;
     }
 }
 
@@ -86,7 +85,7 @@
 
 .display-container h1{
     color: white;
-    font-size: 65px;
+    font-size: 70px;
     padding-bottom:10px ;
     font-family: myCustomFont, sans-serif;
     font-weight: 100;

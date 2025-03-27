@@ -5,17 +5,38 @@ let currentInput = "";
 let operator = "";
 let previousInput = "";
 
-// Function para mag-format ng number na may comma (e.g., 1,000)
+// Function  mag-format ng number na may comma (e.g., 1,000)
 function formatNumber(num) {
     return new Intl.NumberFormat("en-US").format(num);
 }
+
+
+// Live clock
+function updateClock() {
+    const clockElement = document.querySelector(".clock");
+    const now = new Date();
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+
+    // Formatting ng oras (AM/PM format)
+    let ampm = hours >= 12 ? "PM" : "AM";
+    hours = hours % 12 || 12;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+
+    clockElement.textContent = `${hours}:${minutes} ${ampm}`;
+}
+
+
+updateClock();
+// Mag-update kada 1 segundo
+setInterval(updateClock, 1000);
 
 buttons.forEach(button => {
     button.addEventListener("click", () => {
         const value = button.value;
         console.log(`Button clicked: ${value}`);
 
-        clickAudio.play(); // Click Effect
+        clickAudio.play(); // I-play ang tunog
         
         // CLEAR (C) BUTTON
         if (value === "C") {
@@ -23,6 +44,7 @@ buttons.forEach(button => {
             operator = "";
             previousInput = "";
             display.textContent = "0";
+          
             console.log("Cleared all values");
         } 
         
@@ -30,6 +52,7 @@ buttons.forEach(button => {
         else if (!isNaN(value) || value === ".") {
             currentInput += value;
             display.textContent = formatNumber(currentInput);
+          
             console.log(`Current Input: ${currentInput}`);
         } 
         
@@ -41,6 +64,7 @@ buttons.forEach(button => {
             if (value === "%") {
                 currentInput = (parseFloat(currentInput) / 100).toString();
                 display.textContent = formatNumber(currentInput);
+              
                 console.log(`Percentage Calculated: ${currentInput}`);
                 return;
             }
@@ -57,6 +81,7 @@ buttons.forEach(button => {
             if (currentInput !== "") {
                 currentInput = (parseFloat(currentInput) * -1).toString(); 
                 display.textContent = formatNumber(currentInput);
+              
                 console.log(`Negate: ${currentInput}`);
             }
         }
@@ -83,10 +108,12 @@ buttons.forEach(button => {
                         break;
                     case "÷":
                         result = num2 !== 0 ? num1 / num2 : "Error";
+                        
                         break;
                 }
 
                 display.textContent = formatNumber(result);
+              
                 currentInput = result.toString();
                 previousInput = "";
                 operator = "";
