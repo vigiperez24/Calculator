@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favIcon/favIcon.svg">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="main-container">    
+        <div class="cal-container">
+            <!-- Nav notif container -->
+             <div class="nav-container">
+                <!-- time -->
+                 <div >
+                    <p class="clock">09:30 </p>
+                 </div>
+
+                 <!-- Icons -->
+                 <div class="three-icons">
+                    <span class="material-icons white">signal_cellular_alt</span>
+                    <span class="material-icons">wifi</span>
+                    <img style="height: 26px;" src="Icons/batteryIcon.png" alt="batteryIcon">
+                 </div>
+             </div>
+
+             <!-- Display Output -->
+              <div class="display-container">
+                <h1>0</h1>
+              </div>
+
+              <!-- Button container -->
+               <div class="btn-container">
+                    <div class="buttons">
+                        <!-- First Row -->
+                         <!-- Clear BTN -->
+                        <button id="btnClear" class="btn gray " value="C">C</button>
+
+                        <button class="btn gray"   value="+/-">+/-</button>
+                        <button class="btn gray"   value="%">%</button>
+                        <button class="btn orange" value="+">÷</button>
+
+                        <!-- Second Row -->
+                        <button class="btn darkgray" value="7">7</button>
+                        <button class="btn darkgray" value="8">8</button>
+                        <button class="btn darkgray" value="9">9</button>
+                        <button class="btn orange" value="x">x</button>
+
+                        <!-- Third Row -->
+                        <button class="btn darkgray" value="4">4</button>
+                        <button class="btn darkgray" value="5">5</button>
+                        <button class="btn darkgray" value="6">6</button>
+                        <button class="btn orange" value="-">-</button>
+                        
+                        
+                        <!-- four Row -->
+                        <button class="btn darkgray" value="1">1</button>
+                        <button class="btn darkgray" value="2">2</button>
+                        <button class="btn darkgray" value="3">3</button>
+                        <button class="btn orange" value="+">+</button>
+
+                        <!-- Fifth Row -->
+                        <button class="btn darkgray zero" value="0">0</button>
+                        <button class="btn darkgray" value=".">.</button>
+                        <button class="btn orange" value="=">=</button>
+
+
+
+
+                    </div>
+               </div>
+               <div class="home-btn">
+                <div></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

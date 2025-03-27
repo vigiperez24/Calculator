@@ -1,0 +1,141 @@
+@font-face {
+    font-family: 'myCustomFont';
+    src: url('myFonts/SFPRODISPLAYREGULAR.OTF') format('opentype');
+    font-style: normal;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: myCustomFont;
+}
+
+.main-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #9EBAC6;
+}
+
+.main-container .cal-container{
+    position: relative;
+    height: 832px;
+    width: 393px;
+    background-color:black ;
+    border-radius: 50px ;
+    padding: 20px;
+    border: solid 3px rgb(226, 223, 223);
+}
+
+.cal-container .nav-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 1px 15px 1px 15px;
+    position: relative;
+
+}
+
+.nav-container .clock{
+    color: white;
+    font-size: 16px;
+}
+
+.nav-container .three-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
+
+.three-icons span{
+    color: white;
+    font-size: 18px;
+}
+
+
+/* Display Output */
+.display-container {
+    overflow-y: auto;
+    display: flex;
+    height: 290px;
+    align-items:end;
+    justify-content: end;
+
+
+}
+
+.display-container h1{
+    color: white;
+    font-size: 65px;
+    padding-bottom:10px ;
+    font-family: myCustomFont, sans-serif;
+    font-weight: 100;
+}
+
+
+
+/* My Buttons */
+.btn-container{
+
+
+}
+.btn-container .buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #333333;
+    gap: 15px;
+    
+}
+
+.btn-container .buttons .btn {
+    aspect-ratio: 1/1; /* Maintains a square shape */
+    width: 75px; /* Adjust as needed */
+    border-radius: 50%;
+    font-size: 24px;
+    color: white;
+    font-weight: 600;
+    border: none;
+    outline: none;
+}
+
+/* Zero btn */
+.btn-container .buttons .zero {
+    width: 160px; /* Longer width */
+    border-radius: 40px; /* Slightly rounded */
+    aspect-ratio: unset;
+    text-align: start;
+    padding: 18px;
+    
+}
+
+/* Orange Btn */
+
+.btn-container .buttons .orange{
+    background-color:#FEA106 ;
+}
+/* lighgray btn */
+.btn-container .buttons .gray{
+    background-color:#A5A5A5 ;
+    color: #333333;
+}
+/* Darkgray  */
+.btn-container .buttons .darkgray{
+    background-color:#333333 ;
+}   
+
+.home-btn{
+    position: absolute;
+    background-color: white;
+    width: 150px;
+    height: 4px;
+    border-radius: 50px;
+    bottom: 20px;
+    left: 110px;
+    right: 50px;
+
+}
